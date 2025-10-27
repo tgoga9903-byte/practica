@@ -1,0 +1,35 @@
+// 1. Методы
+public class Math
+{
+    public int Sum(int a, int b)  // публичный, возвращает число
+    {
+        return a + b;
+    }
+    
+    private void Show(string text)  // приватный, void - ничего не возвращает
+    {
+        Console.WriteLine(text);
+    }
+}
+
+// 2. Класс User
+public class User
+{
+    public string Login { get; set; }
+    public string Password { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+    
+    public void Enter()
+    {
+        Console.WriteLine($"{Name} вошел");
+    }
+}
+
+// Использование
+User user = new User();
+user.Name = "Вася";
+user.Enter();
+
+Math math = new Math();
+int result = math.Sum(2, 3);
